@@ -5,11 +5,14 @@ export default class FetchCountries {
 
     fetchCountriesByName() {
         return fetch(`https://restcountries.eu/rest/v2/name/${this.searchQuery}`)
-            .then(response => response.json())
+            .then(response => {
+                return response.json();
+            })
             .then(countries => {
                 return countries;
             })
     }
+
 
     get query() {
         return this.searchQuery;
@@ -19,3 +22,4 @@ export default class FetchCountries {
         this.searchQuery = newQuery;
     }
 }
+

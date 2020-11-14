@@ -25,11 +25,12 @@ function onSearch(event) {
   fetchApiCountries.query = event.target.value.trim();
 
   if (fetchApiCountries.query === '') {
+    clearInputField();
     notification('error', "Enter country name!");
     return;
   }
   fetchApiCountries.fetchCountriesByName()
-    .then(appendCountriesMarkUp)
+    .then(appendCountriesMarkUp).then(clearInputField);
 }
 
 function appendCountriesMarkUp(countries) {
@@ -54,6 +55,7 @@ function appendCountriesMarkUp(countries) {
     notification('error', "Enter country name in English!");
     return;
   }
+
 }
 
 function clearCountriesMarkUp(countries) {
@@ -61,8 +63,10 @@ function clearCountriesMarkUp(countries) {
 }
 
 function clearInputField() {
-  
+  refs.input.value = '';
 }
+
+
 
 
 

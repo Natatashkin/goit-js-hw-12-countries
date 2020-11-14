@@ -14,3 +14,40 @@ body {
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   background-image: url(./images/bg-pattern.png);
 }
+
+h1 {
+  font-size: 48px;
+}
+
+.input-field {
+  padding: 10px 5px;
+  border-color: darkgray;
+  font-size: 20px;
+}
+
+.country-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 40px;
+}
+.country-name {
+  font-size: 36px;
+}
+.country-info {
+  width: 500px;
+  font-size: 24px;
+}
+.country-languages-list {
+  padding-left: 0;
+}
+
+.country-languages-item {
+  margin-left: 60px;
+}
+
+.country-flag {
+  width: 500px;
+}
+.country-flag img {
+  width: 100%;
+}
