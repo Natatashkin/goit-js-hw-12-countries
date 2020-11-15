@@ -3,6 +3,7 @@ import { error } from "@pnotify/core";
 export default class FetchCountries {
     constructor() {
         this.searchQuery = '';
+        this.checkInput();
     }
 
     fetchCountriesByName() {
@@ -14,6 +15,13 @@ export default class FetchCountries {
             .then(countries => {
                 return countries;
             })
+            .catch( error => console.log(error))
+    }
+
+    checkInput() {
+        if (this.searchQuery = '') {
+            return;
+        }
     }
 
 
