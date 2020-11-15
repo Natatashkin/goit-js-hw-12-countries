@@ -7,9 +7,9 @@ export default class FetchCountries {
 
     fetchCountriesByName() {
         return fetch(`https://restcountries.eu/rest/v2/name/${this.searchQuery}`)
-            .then(resp => (resp.ok)
-            ? resp.json()
-            : Promise.reject('is not ok: ' + resp.status)
+            .then(response => (response.ok)
+            ? response.json()
+            : Promise.reject('is not ok: ' + response.status)
             )
             .then(countries => {
                 return countries;
